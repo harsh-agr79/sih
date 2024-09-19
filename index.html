@@ -1,12 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified JavaScript -->
+  </head>
+  <body>
+    <div class="center" style="margin-top: 10px">
+      <img src="./sam-dark-fin.png" style="height: 50px" alt="" />
+    </div>
+    <div class="container center" style="margin-top: 10px">
+      <iframe
+        width="800"
+        height="400"
+        src="https://www.youtube.com/embed/jKsx52jx2Ro?si=lQcJQeVWDLC-epBw"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="row container">
+      <div class="row" style="margin: 20px">
+        <div class="col s12 m6 text-block">
+          <h4 style="color: rgb(255, 185, 92)">INTRO</h4>
+          The proposed solution addresses key challenges in Rajasthan’s
+          employment sector, especially for freshers and young professionals.
+          The platform aims to fill gaps in guidance, job awareness, and
+          inclusivity, targeting both private and government organizations.
+        </div>
+        <div class="col m6 s12"></div>
+      </div>
+      <div class="row">
+        <div class="col m6 s12"></div>
+
+        <div class="col s12 m6 text-block">
+          <h4 style="color: rgb(255, 185, 92)">FEATURES</h4>
+          1. Mentor-Led Guidance<br />
+          2. Student & Skilled Worker Inclusion<br />
+          3. AI/LLM Assistance<br />
+          4. Multilingual Support<br />
+          5. Diversity Focus<br />
+          6. Financial & Career Path Advice<br />
+          7. Gamification<br />
+          8. ML-Powered Job Matching
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 text-block">
+            <h4 style="color: rgb(255, 185, 92)">Technical Approach</h4>
+
+            Cloud Infrastructure: To ensure the platform scales smoothly, cloud technologies will be leveraged, allowing for cost-effective development using Laravel, Python, and React.js.<br>
+            Inclusivity and Sorting: The platform will sort jobs by age, gender, and reservation categories to promote inclusivity in the workforce, focusing on rural and non-graduate workers.<br>
+        </div>
+        <div class="col s12 m6"></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6"></div>
+        <div class="col s12 m6 text-block">
+            <h4 style="color: rgb(255, 185, 92)">Business Model & Revenue Streams</h4>
+
+            Revenue Sources: Credits for job applications, premium employer features, sponsored content, and ads. The mentor revenue-sharing model is based on training and content provision.<br>
+            Key Partners: Mentors, government agencies, advertisers, and cloud service providers to ensure scalability and industry relevance.
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 text-block">
+            <h4 style="color: rgb(255, 185, 92)">Impact and Benefits</h4>
+            Economic Growth: Boosting GDP, increasing tax revenues, and improving India's global image.<br>
+            Social Stability: Reducing poverty, enhancing public satisfaction, and empowering women.<br>
+            Regional Development: Creating jobs in rural areas, reducing urban migration, and stimulating local economies.<br>
+        </div>
+        <div class="col s12 m6"></div>
+      </div>
+      <div class="row"></div>
+        <div class="col s12 m6 text-block">
+            <h4 style="color: rgb(255, 185, 92)">User Benefits:</h4>
+            
+
+        Enhanced Employability: Offering personalized guidance, industry exposure, and profile optimization.<br>
+        Bridging Skill Gaps: Access to experienced mentors and workshops for skill development aligned with modern job market requirements.<br>
+        Community and Networking: Building peer-to-peer networks to support career growth, along with volunteer opportunities for community engagement.<br>
+        </div>
+        <div class="col s12 m6"></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      // Function to get user device and browser details
+      function getUserDetails() {
+        return {
+          browser: navigator.userAgent,
+          platform: navigator.platform,
+          language: navigator.language,
+          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+          screenResolution: `${window.screen.width}x${window.screen.height}`,
+        };
+      }
+
+      // Send a POST request with the user details
+      function sendDetailsToServer(details) {
+        fetch("https://your-server-endpoint.com/collect-data", {
+          // Change to your URL
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(details),
+        })
+          .then((response) => response.json())
+          .then((data) => console.log("Success:", data))
+          .catch((error) => console.error("Error:", error));
+      }
+
+      // Collect the user details and send them when the page loads
+      window.onload = function () {
+        const userDetails = getUserDetails();
+
+        // Send data to your backend
+        sendDetailsToServer(userDetails);
+      };
+    </script>
+  </body>
 </html>

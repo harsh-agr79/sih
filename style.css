@@ -1,0 +1,9 @@
+body{
+    background: rgb(31, 31, 31);
+    color: white;
+}
+
+.text-block{
+    font-size: 22px;
+    text-align: justify;
+}
