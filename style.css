@@ -10,7 +10,7 @@ body{
 .video-wrapper {
     padding: 20px; /* Padding around the video */
     margin: 20px auto; /* Center the video with margin */
-    max-width: 600px; /* Set a maximum width */
+    max-width: 900px; /* Set a maximum width */
     /* background-color: #fff; Optional: Add background for neatness */
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     border-radius: 10px; /* Optional: Round the corners */
